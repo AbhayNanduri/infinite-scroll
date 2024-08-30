@@ -15,7 +15,7 @@ const NewsFeed = () => {
     if (loading) return; // Prevent multiple fetches
     setLoading(true);
     console.log(`Fetching page ${page}...`);
-    try {
+    try {//https://jsonplaceholder.typicode.com/todos/1
       const response = await fetch(
         `https://newsapi.org/v2/top-headlines?country=us&pageSize=10&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
       );

@@ -14,7 +14,7 @@ const NewsFeed = () => {
     setLoading(true);
     console.log('Fetching posts...');
     try {
-      const url = `https://www.reddit.com/r/TIHI/new.json?limit=10${after ? `&after=${after}` : ''}`;
+      const url = `https://www.reddit.com/r/technology/new.json?limit=10${after ? `&after=${after}` : ''}`;
       const response = await fetch(url);
       const data = await response.json();
 
